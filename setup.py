@@ -16,7 +16,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3.8",
-        "License :: OSI Approved :: CC License",
+        "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
         "Operating System :: OS Independent",
     ],
     setup_requires=['ffmpeg-python', 'm3u8', 'pymediainfo', 'requests']
