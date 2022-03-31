@@ -1,16 +1,5 @@
 import setuptools
 
-try:
-    # for pip >= 10
-    from pip._internal.req import parse_requirements
-except ImportError:
-    # for pip <= 9.0.3
-    from pip.req import parse_requirements
-
-def load_requirements(fname):
-    reqs = parse_requirements(fname, session="test")
-    return [str(ir.req) for ir in reqs]
-
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -30,5 +19,5 @@ setuptools.setup(
         "License :: OSI Approved :: CC License",
         "Operating System :: OS Independent",
     ],
-    install_requires=load_requirements("requirements.txt")
+    setup_requires=['ffmpeg-python', 'm3u8', 'pymediainfo', 'requests']
 )
